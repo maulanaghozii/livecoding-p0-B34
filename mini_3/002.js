@@ -21,7 +21,7 @@ branches = [
   ] //Branch 3
 ]
 
-dari data tersebut tampikan hasil income dan outcome perbulan masing masing cabang dengan formatsebagai berikut
+dari data tersebut tampikan hasil income dan outcome perbulan masing masing cabang dengan format sebagai berikut
 | {bulan} | Branch-1 IN: {income} OUTCOME: {outcome} | Branch-2 IN: {income} OUT{outcome} | Branch-3 IN: {income} OUT{outcome} |
 
 OUTPUT: 
@@ -43,6 +43,7 @@ OUTPUT:
 
 function printBranch(branches) {
     // your code is here
+    const month = ['jan', 'feb', 'march', 'april', 'mei', 'jun', 'jul', 'augst', 'sept', 'oct', 'nov', 'dec']
 }
   
   //TEST CASE 1

@@ -30,6 +30,23 @@
 
 function pairProject( students ) {
     // your code here 
+    let result =[];
+    let amountStudents = students.length;
+    if(amountStudents%2 !== 0){
+        return 'jumlah murid harus genap'
+    } else{
+        for(let i=0; i<amountStudents-1; i+=2){
+            if(students[i][0]!==students[i+1][0]){
+                result.push(students[i]+' dan '+students[i+1])
+            } else{
+                let temp = students[i+1];
+                students[i+1] = students[i+2]
+                students[i+2] = temp;
+                result.push(students[i]+' dan '+students[i+1])
+            }
+        }
+    }
+    return result;
 }
 
 console.log( pairProject(["Aries","Awtian","Momotaro","Yoki","Icha","Wika","Wawan","Mimin","Ryan","Yogi"]) )

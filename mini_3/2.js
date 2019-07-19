@@ -12,6 +12,18 @@ Sangat mudah bukan?
 
 function dataAdjustment (array) {
   // YOUR CODE HERE
+  let result = [];
+  for(let i=0; i<array.length; i++){
+    let objIdentitiy = {
+      name: array[i][0],
+      age : 2019 - array[i][1],
+      gender : array[i][2],
+      skill : array[i][3]
+    }
+
+    result.push(objIdentitiy)
+  }
+  return result
 }
 
 console.log(dataAdjustment([
