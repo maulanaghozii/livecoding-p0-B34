@@ -107,3 +107,9 @@ function calcAljebraAdi(stringAlJebra) {
 console.log(calcAljebraAdi('2k+3c=2300 7k+2c=7200'))//'k = 1000 c = 100'
 console.log(calcAljebraAdi('3a+4b=500 7a+8b=1100'))//'a = 100 b = 50'
 console.log(calcAljebraAdi('2c+4a=400 3a+3c=450'))//'c = 100 a = 50'
+
+
+// brute force
+
+// k 0 - 7200
+// c 0 - 7200

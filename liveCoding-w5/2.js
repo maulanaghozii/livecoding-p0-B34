@@ -49,6 +49,7 @@ function warOfFun(informations) {
     }
     counter.push(counterNow)
   }
+  console.log(counter)
 
   for(let i=1; i<counter.length; i++){
     let highestScore = counter[0];
@@ -73,7 +74,7 @@ function warOfFun(informations) {
 console.log(warOfFun([
   ['andre', 'toni', 'toti'],
   ['risk', 'fun', 'go'],
-  ['humble', 'psyhco', 'strong']
+  ['humble', 'fun', 'fun']
 ]))
 // pemenangnya adalah toni
 

@@ -17,17 +17,34 @@
     }
   } */
 
+  // function deepSum(arr){
+  //   let result =  0;
+  //   // let number = typeof 0
+  //   for(let i=0; i<arr.length; i++){
+  //     if(typeof arr[i] ==='number'){
+  //       result+=arr[i]
+  //     } else{
+  //       result += deepSum(arr[i])
+  //     }
+  //   }
+  //   return result
+  // }
+
+
   function deepSum(arr){
-    let result =  0;
+    // let result =  0;
     // let number = typeof 0
-    for(let i=0; i<arr.length; i++){
-      if(typeof arr[i] ==='number'){
-        result+=arr[i]
-      } else{
-        result += deepSum(arr[i])
+    // for(let i=0; i<arr.length; i++){
+      if (arr.length === 0) {
+        return 0
       }
-    }
-    return result
+      var depan = arr[0]
+      if(typeof depan !=='number'){
+        depan = deepSum(arr[0])
+      }
+      return depan + deepSum(arr.slice(1))
+    // }
+    // return result
   }
 
   //TEST CASE

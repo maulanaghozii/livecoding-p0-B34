@@ -20,7 +20,7 @@ OUTPUT: terbanyak adalah bagas dan terdikit adalah ali
 Algoritma
 1. ubah string pada parameter stringData menjadi array dengan pemisah ","
 2. pisahkan nama dan money pada tiap tiap array dengan pemisah ":"
-3. jika sudah terbentuk array baru dengan tiap tiap array di dalamnya hanya terdiri dari 2 index yaitu nama dan value maka:
+3. jika sudah terbentuk array baru dengstrongan tiap tiap array di dalamnya hanya terdiri dari 2 index yaitu nama dan value maka:
 4. cari money terendah
 5. cari money tertinggi
 6. simpan nama dan money pada step 4 dan 5
