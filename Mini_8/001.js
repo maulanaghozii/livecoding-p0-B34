@@ -84,6 +84,9 @@ var products = [
 
 function cart(shops) {
     // your code here 
+    if(shops.length === 0){
+        return 'anda harus memilih product '
+    }
     let objResult = {
         title: 'Nota Pembayaran',
         carts: [],
@@ -97,12 +100,16 @@ function cart(shops) {
             }
         }
         subtotal = counterqty *products[i].price
-        objResult.carts.push({
-            id: products[i].id,
-            title: products[i].title,
-            qty: counterqty,
-            subtotal: subtotal
-        })
+        if(counterqty === 0){
+
+        } else {
+            objResult.carts.push({
+                id: products[i].id,
+                title: products[i].title,
+                qty: counterqty,
+                subtotal: subtotal
+            })
+        }
         objResult.total += subtotal
     }
     return objResult
