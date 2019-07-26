@@ -37,4 +37,4 @@ function parseNumber(equation) {
 console.log(parseNumber(3033)) // 3000+300+30+3
 console.log(parseNumber(90)) // 90
 console.log(parseNumber(105050)) // 2000+300+30+3
-console.log(parseNumber(1000100))
+console.log(parseNumber(1000100)) //1000000+100
