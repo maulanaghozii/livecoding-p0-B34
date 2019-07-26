@@ -53,10 +53,18 @@ function evenDeepSum(array) {
     if(typeof depan !=='number'){
       depan = evenDeepSum(array[0])
     }
-    if(depan%2 ===0){
-      return depan + evenDeepSum(array.slice(1))
-    }
 
+    if(array.length === 1){
+      if(depan%2 === 0){
+        return depan
+      } else{
+        return 0
+      }
+    } else if(depan%2 ===0){
+        return depan + evenDeepSum(array.slice(1))
+    }else {
+      return 0 + evenDeepSum(array.slice(1))
+    } 
 }
 
 //TEST CASE
