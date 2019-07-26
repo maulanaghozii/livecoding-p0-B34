@@ -13,28 +13,47 @@
 */
 
 function parseNumber(equation) {
-  // code here
-  if(equation%10 === 0 && equation < 100){
-    return String(equation)
+  if (equation < 10 || isNaN(equation)) {
+    return equation
   }
-  if(equation < 1000){
-    return String(equation)
-  }else {
-    let toString = equation.toString()
-    let length = toString.length
-    let zero = ''
-    if(toString[0] === '0'){
-     return parseNumber(toString.slice(1))
-    }else{
-        for(let i=0; i<length-1; i++){
-          zero += '0'
-        }
-    }
-    return `${toString[0]}${zero}+${parseNumber(parseInt(toString.slice(1)))}`
+  let toString = equation.toString()
+  let length = toString.length
+  if (toString[0] === '0') {
+    return parseNumber(toString.slice(1))
+  } 
+  if(parseInt(toString)% parseInt(toString[0]*Math.pow(10,length-1))===0){
+    return toString
   }
+  return `${toString[0]*Math.pow(10,length-1)}+${parseNumber(parseInt(toString.slice(1)))}`
 }
+// }
 
 console.log(parseNumber(3033)) // 3000+300+30+3
-console.log(parseNumber(90)) // 90
-console.log(parseNumber(105050)) // 2000+300+30+3
-console.log(parseNumber(1000100)) //1000000+100
+console.log(parseNumber(990)) // 90
+console.log(parseNumber(4050)) // 2000+300+30+3
+console.log(parseNumber(1001000)) //1000000+100
+
+/**
+ 30000
+   333-
+   300
+    33-
+    30
+     3-
+
+ */
+
+ /* 
+ 10
+ 100
+ 1000
+ 10000
+ */
+
+ /* 
+ i=0
+ while (equation>Math.pow(10,i))
+Math.pow(10,i)
+
+ i++
+ */
